@@ -1,11 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day and Night Transition</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images//favicon_io/favicon-16x16.png">
+
 </head>
 <body>
+  <div class="background-layer"></div>
+  <div class="content">
+    <div class="card">
+      
+      <div class="weather">
+        <img src="images/rain.png" class="weather-icon">
+        <div class="weather-details">
+          <h1 class="temp">22°c</h1>
+          <h2 class="city">Dublin</h2>
+          <h3 class="description">broken clouds</h3>
+          <div class="details">
+            <div class="col">
+              <img src="images/humidity.png" alt="">
+              <div>
+                <p class="humidity">50%</p>
+                <p>Humidity</p>
+              </div>
+            </div>
+            <div class="col">
+              <img src="images/wind.png" alt="">
+              <div>
+                <p class="wind">15 Km/h</p>
+                <p>Wind Speed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+          </div>
+        </div>
+      </div>
+      
+    </div>
+   
+    <img src="/foreground.png" alt="Foreground Image" class="foreground-image">
+  </div>
+  <div class="slider-container">
+    <label for="gradientSlider">Day to Night Transition:</label>
+    <input type="range" id="gradientSlider" min="0" max="100" step="1" value="0" oninput="updateGradient()">
+    <div class="search">
+        <input type="text" placeholder="Enter City Name" spellcheck="false">
+        <div class="error">Invalid City Name</div>
+      </div>
+      <div class="search">
+        <button><img src="images/search.png" alt=""></button>
+        <button onclick="confetti(); playYay();">Confetti</button>
+        <button onclick="voice()">Voice</button>
+        <button onclick="rave()">Rave</button>
+      </div>
     
+</div>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </body>
 </html>
