@@ -1,208 +1,143 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
+document.addEventListener('DOMContentLoaded', function() {
+    const backgroundLayer = document.querySelector('.background-layer');
+    const slider = document.getElementById('gradientSlider');
+    let raveInterval;
+  //---------------------Background color changer---------------------------------
+    function updateGradient() {
+      const value = slider.value / 100;
+      const lightBlue = [135, 206, 250];  // RGB values for light blue
+      const darkBlue = [0, 0, 102];      // RGB values for dark blue
+      const white =[250, 250, 250];
+      const black =[0, 0, 0];
+      const blendedColor = blendColors(lightBlue, darkBlue, value);
+      const blendedColor2 = blendColors2(white, black, value);
+      backgroundLayer.style.transition = 'background 0.5s ease-in-out';
+      backgroundLayer.style.background = `linear-gradient(to bottom, rgb(${blendedColor.join(',')}), rgb(${blendedColor2.join(',')})`;
+    }
   
-  .background-layer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transition: background 0.5s ease-in-out;
-    background: linear-gradient(to bottom, #ADD8E6, #fff);
-  }
+    window.updateGradient = updateGradient; // Make updateGradient globally accessible
   
-  .content {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    height: 100%;
-  }
+    // Function to blend two colors
+    function blendColors(color1, color2, ratio) {
+      const blendedColor = color1.map((channel, index) =>
+        Math.round(channel * (1 - ratio) + color2[index] * ratio)
+      );
+      return blendedColor;
+    }
+
+    function blendColors2(color1, color2, ratio) {
+        const blendedColor2 = color1.map((channel, index) =>
+          Math.round(channel * (1 - ratio) + color2[index] * ratio)
+        );
+        return blendedColor2;
+      }
+     
+    //----------------speech to text FUNCTIONS-----------------------
+      function voice() {
+        // Add your voice logic here
+        console.log('Voice button clicked!');
+      }
+
+      //----------------RAVE FUNCTIONS-----------------------
+      function rave() {
+        // Toggle rave effect
+        if (raveInterval) {
+          // If raveInterval is defined, clear the interval to stop rave mode
+          clearInterval(raveInterval);
+          raveInterval = undefined;
+    
+          // Stop the rave audio if it's playing
+          if (raveAudio) {
+            raveAudio.pause();
+            raveAudio.currentTime = 0;
+          }
+        } else {
+          // Start rave mode: Rapidly change background color through hue rotation
+          let hue = 0;
+          raveInterval = setInterval(() => {
+            hue = (hue + 10) % 360;
+            backgroundLayer.style.transition = 'background 0.1s ease-in-out';
+            backgroundLayer.style.background = `linear-gradient(to bottom, hsl(${hue}, 100%, 80%), hsl(${(hue + 180) % 360}, 100%, 80%))`;
+          }, 100);
+    
+          // Start playing the rave audio in a loop
+          raveAudio = new Audio('music.mp3'); //  audio file
+          raveAudio.loop = true;
+          raveAudio.play();
+        }
+      }
+    
+      window.updateGradient = updateGradient;
+      window.voice = voice;
+      window.rave = rave;
+    });
+
+    function playYay() {
+        // Create an Audio element
+        const audio = new Audio('yay.ogg');
+        const audio2 = new Audio('yay2.mp3');
+        // Play the audio
+        audio.play();
+        audio2.play();
+      }
+  //------------weather API URL calls and assignments-----------------------------
+
+   // API and API URL
+   const apiKey = "80c73df9bb32efa840373adfb21d4728";
+   const apiUrl = "https://api.openweathermap.org/data/2.5/weather?&units=metric&q=";
+   // get our input field button and main weather image
+   const searchBox = document.querySelector(".search input");
+   const searchBtn = document.querySelector(".search button");
+   const weatherIcon = document.querySelector(".weather-icon");
+   let textToSpeechMessage = ""
+
+   // get weather data
+   async function checkWeather(city) {
+    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+    
+    // Get the error and weather elements
+    const errorElement = document.querySelector(".error");
+    const weatherElement = document.querySelector(".weather");
   
-  .foreground-image {
-    width: 100%;
-    height: 100vh; 
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0; /* Set a lower z-index for the image */
-    opacity: 0.95;
-  }
-  
-  
-  .card,  .error, .weather {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 1; 
-    color: white; 
-  }
-  
-  .slider-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    text-align: center;
-    z-index: 2; /* Set a higher z-index for the slider */
-    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent background for better readability */
-    padding: 0px;
-    border-radius: 10px;
-  }
-  
-  
-  
-  .card {
-    width: 100%;
-    max-width: 470px;
-    background: rgba(0, 0, 0, 0);
-    color: #fff;
-    margin: 0 auto 0;
-    border-radius: 20px;
-    padding: 40px 35px;
-    text-align: center;
-  }
-  
-  .button-container {
-    display: grid;
-    justify-content: center;
-    margin-top: 20px; 
-  }
-  
-  /* Adjust button styles as needed */
-  button {
-    padding: 10px;
-    background-color: #ebfffc;
-    border: 0;
-    outline: 0;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  
-  /* Add individual styling if required */
-  button:nth-child(1) {
-    /* Style for Confetti button */
-  }
-  
-  button:nth-child(2) {
-    /* Style for Voice button */
-  }
-  
-  button:nth-child(3) {
-    /* Style for Rave button */
-  }
-  .search {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-bottom: 10px; 
-  }
-  
-  .search input {
-    border: 0;
-    outline: 0;
-    background: #ebfffc;
-    color: #555;
-    padding: 10px 25px;
-    height: 30px;
-    border-radius: 30px;
-    font-size: 18px;
-    align-self: center;
-  }
-  
-  .search button {
-    border: 0;
-    outline: 0;
-    background: #ebfffc;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    margin-left: 8px; 
-    align-self: center;
-  }
-  
-  .search button img {
-    width: 16px;
-  }
-  
-  .weather {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-    padding: 20px; 
-  }
-  
-  .weather-icon {
-    width: 100px; 
-    margin-right: 20px; 
-    border-radius: 50%;
-  }
-  
-  .weather-details {
-    flex-grow: 1; /* Allow details to grow and take remaining space */
-  }
-  
-  .weather button {
-    background: #ebfffc;
-    border: 0;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .weather h1 {
-    font-size: 80px;
-    font-weight: 500;
-  }
-  
-  .weather h2 {
-    font-size: 45px;
-    font-weight: 400;
-    margin-top: -2px;
-  }
-  
-  .weather h3 {
-    font-size: 30px;
-    font-weight: 300;
-    margin-top: -2px;
-  }
-  
-  .details {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    margin-top: 5px;
-  }
-  
-  .col img {
-    width: 40px;
-    margin-right: 10px;
-  }
-  
-  .weather {
-    display: none;
-  }
-  
-  .error {
-   
-    text-align: left;
-    margin-left: 10px;
-    font-size: 20px; 
-    margin-top: 10px;
-    display: none;
-    color: red;
-  }
+    // check city input is valid, if not, show an error
+    if (response.status == 404) {
+      errorElement.style.display = "block";
+      weatherElement.style.display = "none";
+    } else {
+           let data = await response.json();
+
+           document.querySelector(".city").innerHTML = data.name;
+           document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
+           document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+           document.querySelector(".wind").innerHTML = data.wind.speed + " Km/h";
+           document.querySelector(".description").innerHTML = data.weather[0].description;
+           //display data to console
+           console.log(data);
+          
+            const textToSpeechMessage = `The weather in ${city} is ${data.weather[0].description}. The temperature is ${Math.round(data.main.temp)} degrees Celsius.`;
+            // Now you can use textToSpeechMessage for your purpose, such as passing it to a text-to-speech API or displaying it in your application
+            console.log(textToSpeechMessage);
+           //use the data to decide which image should be shown
+           if (data.weather[0].main == "Clouds") {
+               weatherIcon.src = "images/clouds.png";
+           } else if (data.weather[0].main == "Clear") {
+               weatherIcon.src = "images/clear.png";
+           } else if (data.weather[0].main == "Rain") {
+               weatherIcon.src = "images/rain.png";
+           } else if (data.weather[0].main == "Drizzle") {
+               weatherIcon.src = "images/drizzle.png";
+           } else if (data.weather[0].main == "Fog") {
+               weatherIcon.src = "images/mist.png";
+           } else {
+               weatherIcon.src = "images/snow.png";
+           }
+           //Weather div is hidden by default, if city is valid display the weather content div
+           document.querySelector(".weather").style.display = "block";
+           document.querySelector(".error").style.display = "none";
+       }
+   }
+   // add listener to the search button
+   searchBtn.addEventListener("click", () => {
+       //run function check weather passing it the value in our text input field
+       checkWeather(searchBox.value);
+   })
