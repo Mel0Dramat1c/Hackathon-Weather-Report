@@ -259,6 +259,8 @@ searchBtn.addEventListener("click", () => {
   checkWeather(searchBox.value);
 });
 
+/* Add images to each question */
+
 const questions = [
   {
       question: "What do we call the white, fluffy stuff that falls from the sky in winter?",
