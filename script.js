@@ -79,7 +79,7 @@ window.updateGradient = updateGradient; // Make updateGradient globally accessib
         }, 100);
 
         // Start playing the rave audio in a loop
-        raveAudio = new Audio('music.mp3'); //  audio file
+        raveAudio = new Audio('assets/sound/music.mp3'); //  audio file
         raveAudio.loop = true;
         raveAudio.play();
       }
@@ -146,7 +146,7 @@ function rave() {
     }, 100);
 
     // Start playing the rave audio in a loop
-    raveAudio = new Audio('music.mp3'); //  audio file
+    raveAudio = new Audio('/assets/sound/music.mp3'); //  audio file
     raveAudio.loop = true;
     raveAudio.play();
   }
