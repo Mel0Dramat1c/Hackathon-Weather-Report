@@ -12,11 +12,15 @@
 </head>
 <body>
   <div class="background-layer"></div>
-  <a  id="buttonquiz" class="btn btn-info btn-lg">Open Weather Quiz</a>
+  
   
   <div class="content">
+    
     <div class="card">
-      <div  id="modal" class="modal fade" role="dialog"class="app">
+      <button type="button"  id="buttonQuiz" onclick="openQuiz();">
+        Open Quiz
+      </button>
+      <div  id="quizDiv"class="app">
         <h1>Weather Quiz</h1>
         <div class="quiz">
             <h2 id="question"> Quetion goes here</h2>
@@ -27,6 +31,7 @@
             <button id="next-btn">Next</button>
         </div>
     </div>
+      
       
       <div class="weather">
         <img src="/assets/images/rain.png" class="weather-icon">
