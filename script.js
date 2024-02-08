@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let temp = document.querySelector('h1').innerText
     let city = document.querySelector('h2').innerText;
     let weather = document.querySelector('h3').innerText;
-    let textToSpeak = `${city} is experiencing ${weather}, it's currently ${temp}, the local time is ${new Date().toLocaleTimeString()}.`;
+    let textToSpeak = `${city} is experiencing ${weather}, it's currently ${temp}, the local time is ${getLocalTime12Hour()}.`;
 
     // Filter available voices to find a female voice
     let femaleVoice = speechSynthesis.getVoices().find(voice => voice.name === 'Google UK English Female');
@@ -56,7 +56,20 @@ document.addEventListener('DOMContentLoaded', function () {
         console.error('Female voice not found.');
     }
 }
+//12 hour clock format//
+function getLocalTime12Hour() {
+  const now = new Date();
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // Handle midnight (0 hours)
+  minutes = minutes < 10 ? '0' + minutes : minutes; // Add leading zero if minutes are less than 10
+  return hours + ':' + minutes + ' ' + ampm;
+}
 
+// Example usage
+console.log(getLocalTime12Hour());
   //----------------RAVE FUNCTIONS-----------------------
   function rave() {
     // Toggle rave effect
