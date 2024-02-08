@@ -206,13 +206,3 @@ button:nth-child(3) {
   display: none;
   color: red;
 }
-
-.image-container {
-  position: relative;
-  overflow: hidden;
-}
-
-.image-container img {
-  width: 100%;
-  height: auto;
-}
