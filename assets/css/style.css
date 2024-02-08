@@ -206,3 +206,82 @@ button:nth-child(3) {
   display: none;
   color: red;
 }
+/* quiz*/
+*{
+  margin:0;
+  padding:0;
+  font-family:"poppins",sans-serif;
+  box-sizing: border-box;;
+}
+
+.app{
+  background-color:#9bd22a;
+  width:90%;
+  max-width:600px;
+  margin:100px auto 0;
+  border-radius: 10px;
+  padding:30px;
+  border-radius: 60px;
+  display:none;
+
+}
+#modal{
+  
+}
+.app h1{
+  font-size: 35px;
+  color:purple;
+  
+  font-weight: 600;
+  border-bottom: 1px solid #333;
+  padding-bottom:30px;
+}
+.quiz{
+  padding:20px 0px;
+}
+.quiz h2{
+  font-size:18px;
+  color:black;
+  font-weight: 600;
+
+}
+.btn{
+  background-color: white;
+  color: #222;
+  font-weight:500;
+  width:100%;
+  border:1px solid #222;
+  padding:10px;
+  margin:10px 0px;
+  text-align: left;
+  border-radius: 4px;
+  cursor:pointer;
+  transition: all 0.3s;
+}
+.btn:hover.btn:hover:not([disabled]){
+  background-color: aqua;
+}
+btn:disabled{
+  cursor: no-drop;
+}
+#next-btn{
+  background-color:purple; 
+  color:white;
+  font-weight: 700;
+  font-size:15px;
+  width:150px;
+  border:0;
+  padding:10px;
+  margin:20px auto 0;
+  border-radius: 4px;
+  cursor:pointer;
+  display: block !important;
+  
+
+}
+.correct{
+  background-color: green;
+}
+.incorrect{
+  background-color: red;
+}

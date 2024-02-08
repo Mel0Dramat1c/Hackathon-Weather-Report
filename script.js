@@ -258,3 +258,109 @@ function speakWeatherInfo(city, description, temperature, localTime) {
 searchBtn.addEventListener("click", () => {
   checkWeather(searchBox.value);
 });
+
+const questions = [
+  {
+      question: "What do we call the white, fluffy stuff that falls from the sky in winter?",
+      answers: [
+          { text: "snow", correct: true },
+          { text: "sdcfsand", correct: false },
+          { text: "dfc", correct: false },
+          { text: "feds", correct: false }
+
+      ]
+
+  },
+  {
+      question: "On a sunny day, what do you wear to protect your eyes from the bright light?",
+      answers: [
+          { text: "sgw", correct: false },
+          { text: "sdcfsand", correct: false },
+          { text: "sunglasses", correct: true },
+          { text: "feds", correct: false }
+
+      ]
+
+  }
+];
+const questionElement = document.getElementById("question");
+const answerButton = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn");
+
+let currentIndex = 0;
+let score = 0;
+function startQuiz() {
+  currentIndex = 0;
+  score = 0;
+  nextButton.innerHTML = "Next";
+  showQuestion();
+
+}
+function showQuestion() {
+  resetState();
+  let currentQuestion = questions[currentIndex];
+  let quesNo = currentIndex + 1;
+  questionElement.innerHTML = quesNo + "." + currentQuestion.question;
+  currentQuestion.answers.forEach(answer => {
+      const button = document.createElement("button");
+      button.innerHTML = answer.text;
+      button.classList.add("btn");
+      answerButton.appendChild(button);
+      if (answer.correct) {
+          button.dataset.correct = answer.correct
+      }
+      button.addEventListener("click", selectAnswer)
+
+  })
+
+}
+function resetState() {
+  nextButton.style.display = "none";
+  while (answerButton.firstChild) {
+      answerButton.removeChild(answerButton.firstChild)
+  }
+}
+function selectAnswer(e) {
+  const selectedBtn = e.target;
+  const iscorrect = selectedBtn.dataset.correct === "true";
+  if (iscorrect) {
+      selectedBtn.classList.add("correct");
+      score++;
+  } else {
+      selectedBtn.classList.add("incorrect");
+  }
+  Array.from(answerButton.children).forEach(button=>{
+      if(button.dataset.correct==="true"){
+          button.classList.add('correct');
+      }
+      button.disabled=true;
+  });
+  nextButton.style.display="block";
+
+}
+nextButton.addEventListener("click",()=>{
+  if(currentIndex<questions.length){
+      handleNextbutton();
+  }else{
+      startQuiz();
+  }
+})
+function handleNextbutton(){
+  currentIndex++;
+  if(currentIndex<questions.length){
+      showQuestion();
+  }
+  else{
+      showScore();
+  }
+
+}
+function showScore(){
+  resetState();
+  questionElement.innerHTML=`you scored ${score} out of ${questions.length}!`;
+  nextButton.innerHTML="play again";
+  nextButton.style.display="block";
+}
+startQuiz();
+
+
