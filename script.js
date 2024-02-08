@@ -263,10 +263,10 @@ const questions = [
   {
       question: "What do we call the white, fluffy stuff that falls from the sky in winter?",
       answers: [
-          { text: "snow", correct: true },
-          { text: "sdcfsand", correct: false },
-          { text: "dfc", correct: false },
-          { text: "feds", correct: false }
+          { text: "Snow", correct: true },
+          { text: "Sand", correct: false },
+          { text: "Hail", correct: false },
+          { text: "Dust", correct: false }
 
       ]
 
@@ -274,14 +274,102 @@ const questions = [
   {
       question: "On a sunny day, what do you wear to protect your eyes from the bright light?",
       answers: [
-          { text: "sgw", correct: false },
-          { text: "sdcfsand", correct: false },
-          { text: "sunglasses", correct: true },
-          { text: "feds", correct: false }
+          { text: "Binoculars", correct: false },
+          { text: "Reading glasses", correct: false },
+          { text: "Sunglasses", correct: true },
+          { text: "Nothing", correct: false }
 
       ]
 
-  }
+  },
+  {
+    question: "What kind of weather is it when it is bright and warm?",
+    answers: [
+        { text: "Rainy", correct: false },
+        { text: "Sunny", correct: true },
+        { text: "Snowing", correct: false },
+        { text: "Cloudy", correct: false }
+
+    ]
+
+  },
+  {
+    question: "What kind of weather is it when it is wet outside and drops of water fall from the sky?",
+    answers: [
+        { text: "Dry", correct: false },
+        { text: "Sunny", correct: false },
+        { text: "Rainy", correct: true },
+        { text: "Snowing", correct: false }
+
+    ]
+
+  },
+  {
+  question: "What kind of weather is it when it is cold and covered in white snow?",
+  answers: [
+      { text: "Snowing", correct: true },
+      { text: "Sunny", correct: false },
+      { text: "Raining", correct: false },
+      { text: "Stormy", correct: false }
+
+  ]
+
+  },
+  {
+  question: " When it is rainy, what do we bring with us?",
+  answers: [
+      { text: "Snow sled", correct: false },
+      { text: "Tshirt", correct: false },
+      { text: "Sunglasses", correct: false },
+      { text: "Umbrella", correct: true }
+
+  ]
+
+  },
+  {
+  question: "When it is sunny, what do we bring with us?",
+  answers: [
+      { text: "Sun screen", correct: true },
+      { text: "Warm gloves", correct: false },
+      { text: "Umbrella", correct: false },
+      { text: "Heavy boots", correct: false }
+
+  ]
+
+  },
+  {
+  question: "When it is snowy, what do we bring with us?",
+  answers: [
+      { text: "Sunscreen", correct: false },
+      { text: "T-shirt", correct: false },
+      { text: "Sunglasses", correct: false },
+      { text: "A coat and warm gloves", correct: true }
+
+  ]
+
+  },
+  {
+  question: "Because it has rained, what sometimes appears in the sky?",
+  answers: [
+      { text: "Rainbow", correct: true },
+      { text: "Airplane", correct: false },
+      { text: "The moon", correct: false },
+      { text: "Helicopter", correct: false }
+
+  ]
+
+  },
+  {
+  question: "Which of these is not a colour of the rainbow?",
+  answers: [
+      { text: "Red", correct: false },
+      { text: "Black", correct: true },
+      { text: "Yellow", correct: false },
+      { text: "Violet", correct: false }
+
+  ]
+
+}
 ];
 const questionElement = document.getElementById("question");
 const answerButton = document.getElementById("answer-buttons");
