@@ -362,12 +362,122 @@ const questions = [
 
   },
   {
-  question: "Which of these is not a colour of the rainbow?",
-  answers: [
+    question: "Which of these is not a colour of the rainbow?",
+    answers: [
       { text: "Red", correct: false },
       { text: "Black", correct: true },
       { text: "Yellow", correct: false },
       { text: "Violet", correct: false }
+  
+    ]
+  
+  },
+  {
+    question: "Why should we be careful when it is foggy outside.",
+    answers: [
+      { text: "There is no reason to be careful.", correct: false },
+      { text: "It might snow", correct: false },
+      { text: "It is too cold to go outside.", correct: false },
+      { text: "It is hard to see.", correct: true }
+  
+    ]
+  
+  },
+  {
+    question: "Why is it important to wear sunscreen when the temperature is high?",
+    answers: [
+      { text: "It feels nice and cool.", correct: false },
+      { text: "It prevents sunburn and protects your skin.", correct: true },
+      { text: "It is not important.", correct: false },
+      { text: "It keeps you from drying out.", correct: false }
+  
+    ]
+  
+  },
+  {
+    question: "What does 'humidity' mean?",
+    answers: [
+      { text: "How much moisture in the air.", correct: false },
+      { text: "How funny something is.", correct: true },
+      { text: "How heavy the snow is.", correct: false },
+      { text: "How windy it is.", correct: false }
+  
+    ]
+  
+  },
+  {
+    question: "What does 'wind speed' mean?",
+    answers: [
+      { text: "How fast it will be before the wind calms down.", correct: false },
+      { text: "How soon the wind will clear up the rain.", correct: false },
+      { text: "How strong the wind is blowing.", correct: true },
+      { text: "How soon it will snow.", correct: false }
+  
+    ]
+  
+  },
+  {
+    question: "What part of the weather makes a loud booming noise.",
+    answers: [
+      { text: "Thunder", correct: true },
+      { text: "Lightning", correct: false },
+      { text: "Hail", correct: false },
+      { text: "Rain", correct: false }
+  
+    ]
+  
+  },
+  {
+    question: "What do dark clouds in the sky usually mean?",
+    answers: [
+      { text: "It is about to be very sunny.", correct: false },
+      { text: "It is about to rain.", correct: true },
+      { text: "It is going to be a clear sky soon.", correct: false },
+      { text: "It does not mean anything.", correct: false }
+  
+    ]
+  
+  },
+  {
+    question: "What kind of temperature is 2°C?",
+    answers: [
+      { text: "Hot", correct: false },
+      { text: "Mild", correct: false },
+      { text: "Cold", correct: true },
+      { text: "Warm", correct: false }
+  
+    ]
+  
+  },
+  {
+    question: "What kind of temperature is 28°C",
+    answers: [
+      { text: "Warm", correct: false },
+      { text: "Hot", correct: true },
+      { text: "Cold", correct: false },
+      { text: "Mild", correct: false }
+  
+    ]
+  
+  },
+  {
+    question: "What do clouds carry?",
+    answers: [
+      { text: "Wind", correct: false },
+      { text: "Lightning", correct: false },
+      { text: "Rain", correct: true },
+      { text: "Nothing but air", correct: false }
+  
+    ]
+  
+  },
+  {
+  question: "Why is it important to be careful when it is icy?",
+  answers: [
+      { text: "It might melt as you're walking on it.", correct: false },
+      { text: "You might slip and fall.", correct: true },
+      { text: "It might be sticky for your shoes.", correct: false },
+      { text: "It's not important to be careful when it is icy.", correct: false }
 
   ]
 
