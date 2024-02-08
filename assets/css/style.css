@@ -215,7 +215,7 @@ button:nth-child(3) {
 }
 
 .app{
-  background-color:#9bd22a;
+  background-color:#7995b5;
   width:90%;
   max-width:600px;
   margin:100px auto 0;
@@ -223,10 +223,8 @@ button:nth-child(3) {
   padding:30px;
   border-radius: 60px;
   display:none;
-
-}
-#modal{
   
+
 }
 .app h1{
   font-size: 35px;
@@ -259,7 +257,7 @@ button:nth-child(3) {
   transition: all 0.3s;
 }
 .btn:hover.btn:hover:not([disabled]){
-  background-color: aqua;
+  background-color: aquamarine;
 }
 btn:disabled{
   cursor: no-drop;
@@ -284,4 +282,9 @@ btn:disabled{
 }
 .incorrect{
   background-color: red;
+}
+#buttonQuiz{
+  position: fixed;
+    top: 5px;
+    right: 11px 
 }

@@ -449,6 +449,18 @@ function showScore(){
   nextButton.innerHTML="play again";
   nextButton.style.display="block";
 }
+ function openQuiz() {
+ var div = document.getElementById('quizDiv');
+    if (div.style.display !== 'none') {
+        div.style.display = 'none';
+        buttonText.innerHTML="Open Quiz";
+    }
+    else {
+        div.style.display = 'block';
+        buttonText=document.getElementById('buttonQuiz');
+        buttonText.innerHTML="Close Quiz";
+    }
+};
 startQuiz();
 
 
