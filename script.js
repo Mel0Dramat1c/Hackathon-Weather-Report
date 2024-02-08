@@ -78,6 +78,8 @@ document.addEventListener('DOMContentLoaded', function () {
   window.rave = rave;
 });
 // Function to speak the weather information
+
+//* to be removed once Tadhg completes speech JS
 function speakWeatherInfo(city, description, temperature) {
   const textToSpeechMessage = `The weather in ${city} is ${description}. The temperature is ${Math.round(temperature)} degrees Celsius. The local time is ${new Date().toLocaleTimeString()}`;
   console.log(textToSpeechMessage);
