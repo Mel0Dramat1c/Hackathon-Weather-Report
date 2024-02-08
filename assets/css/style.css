@@ -101,6 +101,10 @@ button:nth-child(2) {
 button:nth-child(3) {
   /* Style for Rave button */
 }
+
+button:nth-child(4){
+  
+}
 .search {
   width: 100%;
   display: flex;
