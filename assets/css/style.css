@@ -217,6 +217,21 @@ button:nth-child(3) {
   height: auto;
 }
 
+
+/* Bootstrap for header */
+.header {
+  background-color: ; /* Background color for the header if needed */
+  color: ; /* Text color for the header if needed*/
+  padding: 20px; /* Padding around the header content */
+}
+
+/* Bootstrap for footer */
+.footer {
+  background-color: ; /* Background color for the footer if needed*/
+  color: ;/* Text color for the footer if needed*/
+  padding: 20px; /* Padding around the footer content */
+}
+
 /* Bootstrap positioning for images*/
 .position-top-left {
   position: absolute;
