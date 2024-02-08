@@ -2,9 +2,11 @@
 
 (TBI, insertTitle, toBeInserted)
 
-# Project Title: insertTitle
+
+# Project Title: Weather Report Junior
 
 Our website is designed to provide users with a website with information regarding the weather and educational content for learning about the weather. This project combines an educational resource and a practical application that will teach children about how to prepare for the weather as well as information on the current weather anywhere in the world.
+
 
 ## Team Members
 
@@ -13,21 +15,26 @@ Our website is designed to provide users with a website with information regardi
 - [Joe] - Developer
 - [Tadhg] - Developer
 
+
 ## Technologies Used
+
 - Github
 - Gitpod
 - JavaScript
 - HTML
 - CSS
 - API
-- Chat GPT: https://chat.openai.com
-- Midjourney AI https://www.midjourney.com 
+- Favicon: https://favicon.io/
+- ChatGPT: https://chat.openai.com
+- Midjourney AI: https://www.midjourney.com 
+
 
 ## Introduction
 
 insertTitle uses API through JavaScript to report the weather alongside a child friendly quiz with practical questions to promote safety in all kinds of weather. The project incorporates HTML, CSS, and JavaScript to create an easy to use, responsive product that is appealling to children.
 
 You can use the website to fetch weather reports on anywhere in the world. You can also take a quiz of 20 questions aimed at children about the weather and how to prepare for it. We aimed to create a cohesive theme and aesthetic that is both fun and practical and that challenges us to make use of the skills we have acquired so far as programmers.
+
 
 ## Features
 
@@ -45,14 +52,18 @@ Responsive Design: The website is designed to be accessible and visually appeali
 
 Easy-to-Use Interface: Easy navigation and use of popups for a seamless user experience.
 
-## Bugs
-toBeInserted
+
+### Bugs
+
+
 
 ## Presentation Slides
 TBI
 
+
 ## Link to Website
 TBI
+
 
 ## How to Use
 
