@@ -386,3 +386,5 @@ searchBtn.addEventListener("click", () => {
 // run function check weather passing it the value in our text input field
 checkWeather(searchBox.value);
 });
+
+
