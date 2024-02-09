@@ -678,6 +678,7 @@ const complimentsForChildren = [
   "You're a little miracle-worker!",
   "You're so good at being thoughtful.",
   "You're a little genius!",
+  "You're so based and skibidi",
   "You're so good at being silly.",
   "You're a little spark of magic.",
   "You're so good at being caring.",
