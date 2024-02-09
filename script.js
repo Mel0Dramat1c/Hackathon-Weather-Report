@@ -253,13 +253,13 @@ function updateGradient() {
 // Function to get weather icon based on weather code
 function getWeatherIcon(code) {
   if (code >= 200 && code < 300) {
-    return "/assets/images/thunderstorm.png";
+    return "assets/images/thunderstorm.png";
   } else if (code >= 300 && code < 400) {
-    return "/assets/images/drizzle.png";
+    return "assets/images/drizzle.png";
   } else if (code >= 500 && code < 600) {
-    return "/assets/images/rain.png";
+    return "assets/images/rain.png";
   } else if (code >= 600 && code < 700) {
-    return "/assets/images/snow.png";
+    return "assets/images/snow.png";
   } else if (code >= 700 && code < 800) {
     return "assets/images/mist.png";
   } else if (code === 800) {
