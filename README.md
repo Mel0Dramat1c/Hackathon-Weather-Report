@@ -76,7 +76,8 @@ As a user, I want the application to remember my recently searched cities for qu
 
 ## Wireframe
 
-![Local Image](assets/images/README/ResponsiveIcyplanet.png)
+![Local Image](assets/images/README/FirstWireframe.png)
+![Local Image](assets/images/README/SecondWireframe.png)
 
 ## Introduction
 
