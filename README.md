@@ -137,8 +137,13 @@ An early attempt to implement Bootstrap caused issues with existing CSS and ulti
 
 ## Website Images
 
+The Home Page with buttons and search bars.
 ![Local Image](assets/images/README/projectHome.PNG)
+
+The Quiz Page with weather related, kid friendly questions.
 ![Local Image](assets/images/README/projectQuiz.PNG)
+
+The weather API that fetches weather reports.
 ![Local Image](assets/images/README/projectWeather.PNG)
 
 ## Presentation Slides
