@@ -553,6 +553,12 @@ function selectAnswer(e) {
   const iscorrect = selectedBtn.dataset.correct === "true";
   if (iscorrect) {
       selectedBtn.classList.add("correct");
+      const audio = new Audio('yay.ogg');
+      const audio2 = new Audio('yay2.mp3');
+      // Play the audio
+      audio.play();
+  audio2.play();
+  confetti();
       score++;
   } else {
       selectedBtn.classList.add("incorrect");
@@ -560,6 +566,8 @@ function selectAnswer(e) {
   Array.from(answerButton.children).forEach(button=>{
       if(button.dataset.correct==="true"){
           button.classList.add('correct');
+         
+  
       }
       button.disabled=true;
   });
