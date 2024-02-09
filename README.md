@@ -137,10 +137,11 @@ An early attempt to implement Bootstrap caused issues with existing CSS and ulti
 
 ## Website Images
 
-![Local Image](assets/images/README/quiz.png)
+![Local Image](assets/images/README/projectHome.png)
+![Local Image](assets/images/README/projectQuiz.png)
+![Local Image](assets/images/README/projectWeather.png)
 
 ## Presentation Slides
-TBI
 
 
 ## Link to Website
