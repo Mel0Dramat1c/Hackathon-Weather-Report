@@ -34,6 +34,9 @@ We agreed from the offset to attempt to build a website using an API for weather
 
 ## User Stories
 
+Our initial User Stories were considered from a general perspective:
+
+
 As a user, I want to be able to enter a city name in a search box to get the current weather information for that city.
 
 As a user, I want to see the temperature displayed in Celsius for the selected city.
@@ -74,9 +77,28 @@ As a user, I want to see a loading indicator while the weather data is being fet
 
 As a user, I want the application to remember my recently searched cities for quick access.
 
+
+Later user stories were considered for the new target audience:
+
+As a user, I want my child to be entertained.
+
+As a user, I want my child to receive an educational benefit.
+
+As a user, I want the website to have a practical purpose.
+
+As a user, I want the website to be encouraging for children to use.
+
+As a user, I want my child to be able to understand to the product or be able to easily learn to.
+
+
 ## Wireframe
 
+Our early wireframe idea was ambitious at the time but ultimately ended up being less compact and pleasing to the eye than the finished product.
+
 ![Local Image](assets/images/README/FirstWireframe.png)
+
+The second wireframe was made when we first decided to pursue the idea of making a website aimed at children.
+
 ![Local Image](assets/images/README/SecondWireframe.png)
 
 ## Introduction
