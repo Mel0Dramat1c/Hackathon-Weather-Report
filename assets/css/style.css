@@ -37,7 +37,7 @@ body, html {
 .card,  .error, .weather {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   z-index: 1; 
   color: white; 
@@ -66,19 +66,21 @@ body, html {
   max-width: 470px;
   background: rgba(0, 0, 0, 0);
   color: #fff;
+  
   margin: 0 auto 0;
   border-radius: 20px;
-  padding: 40px 35px;
+  position: relative;
+  top: 20px;
   text-align: center;
 }
 
 .button-container {
   display: grid;
   justify-content: center;
-  margin-top: 20px; 
+  
 }
 
-/* Adjust button styles as needed */
+
 button {
   padding: 10px;
   background-color: #ebfffc;
@@ -131,6 +133,20 @@ button:nth-child(3) {
   cursor: pointer;
   margin-left: 8px; 
   align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease; 
+}
+
+/* Hover effect */
+.search button:hover {
+  background: #c0c2c1; /* Change the background color on hover */
+}
+
+/* Click effect */
+.search button:active {
+  background: #66ccdd; /* Change the background color when clicked */
 }
 
 .search button img {
@@ -146,13 +162,12 @@ button:nth-child(3) {
 }
 
 .weather-icon {
-  width: 100px; 
-  margin-right: 20px; 
+  width: 220px; 
   border-radius: 50%;
 }
 
 .weather-details {
-  flex-grow: 1; /* Allow details to grow and take remaining space */
+  
 }
 
 .weather button {
@@ -166,18 +181,19 @@ button:nth-child(3) {
 .weather h1 {
   font-size: 80px;
   font-weight: 500;
+  margin:5px 0 ;
 }
 
 .weather h2 {
   font-size: 45px;
   font-weight: 400;
-  margin-top: -2px;
+  margin: 10px 0;
 }
 
 .weather h3 {
   font-size: 30px;
   font-weight: 300;
-  margin-top: -2px;
+  
 }
 
 .details {
@@ -185,12 +201,19 @@ button:nth-child(3) {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  margin-top: 5px;
+  background:#2a1552;
+  opacity: 0.3;
+  border-radius: 20px;
+  
 }
-
+.col div{
+  padding:0 10px;
+  font-weight: 400;
+}
 .col img {
   width: 40px;
   margin-right: 10px;
+  padding: 10px;
 }
 
 .weather {
@@ -205,6 +228,44 @@ button:nth-child(3) {
   margin-top: 10px;
   display: none;
   color: red;
+}
+
+
+
+/* ---------------------MEDIA QUERYS--------------- */
+
+/* Media query for screens with a maximum width of 920 pixels */
+@media (max-width: 920px) {
+  .search {
+    justify-content: center;
+    align-items: center; /* Center items horizontally */
+  }
+
+  .search input {
+    margin-bottom: 5px; /* Add some space between input and buttons */
+  }
+  
+  .slider-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .weather-icon{
+    width: 120px;
+  }
+}
+
+/* Media query for screens with a maximum width of 360 pixels */
+@media (max-width: 360px) {
+  /* Keep the size and position of content in the slider container */
+  .slider-container {
+    width: 100%; /* Ensure full width */
+    padding: 0 10px; /* Add some padding for better spacing */
+    box-sizing: border-box; /* Include padding in the width */
+  }
+  .weather-icon{
+    display: none;
+  }
 }
 /* quiz*/
 *{
