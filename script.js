@@ -36,13 +36,41 @@ document.addEventListener('DOMContentLoaded', function () {
 
   //----------------speech to text FUNCTIONS-----------------------
   function voice() {
-    const city = document.querySelector(".city").innerHTML;
-    const description = document.querySelector(".description").innerHTML;
-    const temperature = document.querySelector(".temp").innerHTML.replace("°c", "");
+    // Add your voice logic here
+    let temp = document.querySelector('.temp').innerText
+    let city = document.querySelector('.city').innerText;
+    let weather = document.querySelector('.weather').innerText;
+    let textToSpeak = `${city} is experiencing ${weather}, it's currently ${temp}, the local time is ${new Date().toLocaleTimeString()}.`;
 
-    // Speak the weather information
-    speakWeatherInfo(city, description, temperature);
-  }
+    // Filter available voices to find a female voice
+    let femaleVoice = speechSynthesis.getVoices().find(voice => voice.name === 'Google UK English Female');
+
+    if (femaleVoice) {
+        let utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.voice = femaleVoice;
+        utterance.rate = 0.8;
+
+        window.speechSynthesis.speak(utterance);
+        console.log('Voice button clicked!');
+    } else {
+        console.error('Female voice not found.');
+    }
+}
+//12 hour clock format//
+function getLocalTime12Hour() {
+  const now = new Date();
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // Handle midnight (0 hours)
+  minutes = minutes < 10 ? '0' + minutes : minutes; // Add leading zero if minutes are less than 10
+  return hours + ':' + minutes + ' ' + ampm;
+}
+
+// Example usage
+console.log(getLocalTime12Hour());
+
 
   //----------------RAVE FUNCTIONS-----------------------
   function rave() {
@@ -575,4 +603,90 @@ function showScore(){
 };
 startQuiz();
 
+const complimentsForChildren = [
+  "You're so smart!",
+  "You're a great listener.",
+  "You have a wonderful imagination.",
+  "You're a fantastic friend.",
+  "You're really good at sharing.",
+  "You have a heart of gold.",
+  "You're so brave!",
+  "You're a fantastic helper.",
+  "You're so creative!",
+  "You have a great sense of humor.",
+  "You're a superstar!",
+  "You're so kind to others.",
+  "You're really good at trying new things.",
+  "You're so caring and thoughtful.",
+  "You're a great problem solver.",
+  "You're a ray of sunshine!",
+  "You make everyone around you happier.",
+  "You're a great team player.",
+  "You're so full of energy!",
+  "You have the best ideas.",
+  "You're so good at being you!",
+  "You're a wonderful artist.",
+  "You're so curious and eager to learn.",
+  "You're a champion!",
+  "You're a shining star.",
+  "You're so good at making friends.",
+  "You're a little explorer!",
+  "You're a wonderful bundle of joy.",
+  "You're so good at being kind.",
+  "You have a heart as big as the ocean.",
+  "You're a treasure!",
+  "You're a joy to be around.",
+  "You're so loved.",
+  "You're a true delight.",
+  "You're a rainbow in someone's cloud.",
+  "You're so good at being helpful.",
+  "You're a great adventurer!",
+  "You have the best hugs.",
+  "You're so good at taking turns.",
+  "You're so full of wonder.",
+  "You're a true superhero!",
+  "You have a magical smile.",
+  "You're so good at listening to your heart.",
+  "You're a little miracle!",
+  "You're so good at making the world brighter.",
+  "You're a little star!",
+  "You're so good at being you!",
+  "You're a fantastic dreamer.",
+  "You're a little ball of sunshine.",
+  "You're so good at spreading happiness.",
+  "You're a champion of kindness.",
+  "You're a little blessing.",
+  "You're so good at being brave.",
+  "You're a little miracle-worker!",
+  "You're so good at being thoughtful.",
+  "You're a little genius!",
+  "You're so good at being silly.",
+  "You're a little spark of magic.",
+  "You're so good at being caring.",
+  "You're a little dream come true!",
+  "You're so good at making wishes.",
+  "You're a little piece of heaven."
+];
+
+function getRandomComplimentForChildren() {
+  const randomIndex = Math.floor(Math.random() * complimentsForChildren.length);
+  return complimentsForChildren[randomIndex];
+}
+
+function readCompliment() {
+  const compliment = getRandomComplimentForChildren();
+  const speech = new SpeechSynthesisUtterance(compliment);
+  // Find the female UK voice
+  const femaleUKVoice = speechSynthesis.getVoices().find(voice => voice.name === 'Google UK English Female');
+  if (femaleUKVoice) {
+      speech.voice = femaleUKVoice;
+      speech.rate = 1;
+      window.speechSynthesis.speak(speech);
+  } else {
+      console.error('Female UK voice not found.');
+  }
+}
+
+const button = document.getElementById("complimentButton");
+button.addEventListener("click", readCompliment);
 
