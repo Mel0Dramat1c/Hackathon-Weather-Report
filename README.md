@@ -37,38 +37,35 @@ We agreed from the offset to attempt to build a website using an API for weather
 Our initial User Stories were considered from a general perspective:
 
 
-As a user, I want to be able to enter a city name in a search box to get the current weather information for that city.
-As a user, I want to see the temperature displayed in Celsius for the selected city.
-As a user, I want to know the weather description (e.g., cloudy, sunny, rainy) for the selected city.
-As a user, I want to see an icon representing the current weather conditions for the selected city.
-As a user, I want to know the humidity level for the selected city.
-
-As a user, I want to know the wind speed for the selected city.
-As a user, I want to receive an error message if the entered city is not found.
-As a user, I want to see a visually appealing background gradient that changes based on the time of day.
-As a user, I want the background color to reflect the weather conditions (e.g., blue for clear sky, gray for clouds).
-As a user, I want to hear the weather information being spoken out loud using text-to-speech functionality.
-
-As a user, I want to see an error message if there is an issue fetching the weather data.
-As a user, I want the application to display the local time for the selected city.
-As a user, I want the background color to change dynamically based on the local time.
-As a user, I want to click a button to activate a rave mode that changes the background color rapidly.
-As a user, I want the application to display an error message if the entered city is not valid.
-
-As a user, I want the background gradient to smoothly transition between colors.
-As a user, I want the option to turn off the background music during rave mode.
-As a user, I want to see the current weather conditions updated when I search for a different city.
-As a user, I want to see a loading indicator while the weather data is being fetched.
-As a user, I want the application to remember my recently searched cities for quick access.
+  As a user, I want to be able to enter a city name in a search box to get the current weather information for that city.
+  As a user, I want to see the temperature displayed in Celsius for the selected city.
+  As a user, I want to know the weather description (e.g., cloudy, sunny, rainy) for the selected city.
+  As a user, I want to see an icon representing the current weather conditions for the selected city.
+  As a user, I want to know the humidity level for the selected city.
+  As a user, I want to know the wind speed for the selected city.
+  As a user, I want to receive an error message if the entered city is not found.
+  As a user, I want to see a visually appealing background gradient that changes based on the time of day.
+  As a user, I want the background color to reflect the weather conditions (e.g., blue for clear sky, gray for clouds).
+  As a user, I want to hear the weather information being spoken out loud using text-to-speech functionality.
+  As a user, I want to see an error message if there is an issue fetching the weather data.
+  As a user, I want the application to display the local time for the selected city.
+  As a user, I want the background color to change dynamically based on the local time.
+  As a user, I want to click a button to activate a rave mode that changes the background color rapidly.
+  As a user, I want the application to display an error message if the entered city is not valid.
+  As a user, I want the background gradient to smoothly transition between colors.
+  As a user, I want the option to turn off the background music during rave mode.
+  As a user, I want to see the current weather conditions updated when I search for a different city.
+  As a user, I want to see a loading indicator while the weather data is being fetched.
+  As a user, I want the application to remember my recently searched cities for quick access.
 
 
 Later user stories were considered for the new target audience:
 
-As a user, I want my child to be entertained.
-As a user, I want my child to receive an educational benefit.
-As a user, I want the website to have a practical purpose.
-As a user, I want the website to be encouraging for children to use.
-As a user, I want my child to be able to understand to the product or be able to easily learn to.
+  As a user, I want my child to be entertained.
+  As a user, I want my child to receive an educational benefit.
+  As a user, I want the website to have a practical purpose.
+  As a user, I want the website to be encouraging for children to use.
+  As a user, I want my child to be able to understand to the product or be able to easily learn to.
 
 
 ## Wireframe
