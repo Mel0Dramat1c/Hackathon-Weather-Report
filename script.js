@@ -296,7 +296,7 @@ const questions = [
       { text: "Snow", correct: true },
       { text: "Sand", correct: false },
       { text: "Hail", correct: false },
-      { text: "Dust", correct: false }
+      { text: "Sheep", correct: false }
 
     ]
 
@@ -673,6 +673,7 @@ const complimentsForChildren = [
   "You're so good at spreading happiness.",
   "You're a champion of kindness.",
   "You're a little blessing.",
+  "You're my favourite deputy!",
   "You're so good at being brave.",
   "You're a little miracle-worker!",
   "You're so good at being thoughtful.",
