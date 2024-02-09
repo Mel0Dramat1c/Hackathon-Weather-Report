@@ -74,6 +74,9 @@ As a user, I want to see a loading indicator while the weather data is being fet
 
 As a user, I want the application to remember my recently searched cities for quick access.
 
+## Wireframe
+
+![Local Image](assets/images/README/ResponsiveIcyplanet.png)
 
 ## Introduction
 
@@ -134,5 +137,4 @@ Answer the multiple choice questions the work through the quiz and recieve a sco
 
 ## Ideas for Future Implementation
 
-
-## Special Thank You
+Ideally we would expand upon the features already present within the app including themed backgrounds for each question in the quiz, further text to speech capability in the form of a compliment every time a user correctly answers a question, animated icons, and more sounds and graphics to entertain children while they learn. We also wished to implement a Dark Mode but settled for a slider for the home page which serves a similar purpose. We also would also have liked to implement semi-transparent overlays for different weather reports such as a rain or snow animation.
