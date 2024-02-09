@@ -1,7 +1,5 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-(TBI, insertTitle, toBeInserted)
-
 
 # Project Title: Weather Report Junior
 
@@ -29,6 +27,10 @@ Our website is designed to provide users with a website with information regardi
 - Midjourney AI: https://www.midjourney.com 
 
 # Ideation
+
+## Initial Idea
+
+We agreed from the offset to attempt to build a website using an API for weather reports. Upon reviewing the options presented for the Hackathon we decided to incorporate a quiz into the project in order to meet the specificity of the given briefs. Thus we decided to approach the project with the aim of making an educational app for children that would both provide them with information regarding the weather as well as a supplemental quiz to teach them more about safety and the weather itself. This gave us a unified direction to take the website aesthetically and functionally as the project now had a target audience for children. When the weather app was also made available as a brief we were able to roll two project ideas into one while still keeping it completely coherent in theme and purpose.
 
 ## User Stories
 
@@ -75,7 +77,7 @@ As a user, I want the application to remember my recently searched cities for qu
 
 ## Introduction
 
-insertTitle uses API through JavaScript to report the weather alongside a child friendly quiz with practical questions to promote safety in all kinds of weather. The project incorporates HTML, CSS, and JavaScript to create an easy to use, responsive product that is appealling to children.
+Our project uses API through JavaScript to report the weather alongside a child friendly quiz with practical questions to promote safety in all kinds of weather. The project incorporates HTML, CSS, and JavaScript to create an easy to use, responsive product that is appealling to children.
 
 You can use the website to fetch weather reports on anywhere in the world. You can also take a quiz of 20 questions aimed at children about the weather and how to prepare for it. We aimed to create a cohesive theme and aesthetic that is both fun and practical and that challenges us to make use of the skills we have acquired so far as programmers.
 
@@ -98,7 +100,17 @@ Easy-to-Use Interface: Easy navigation and use of popups for a seamless user exp
 
 
 ### Bugs
+Text to Speech
 
+Images for quiz
+
+Bootstrap
+
+Broken pathing
+
+Foreground Image disappearance
+
+## Website Images
 
 
 ## Presentation Slides
@@ -118,3 +130,9 @@ Use the search bar to type a location and recieve weather information.
 Click the pop up to access the quiz.
 
 Answer the multiple choice questions the work through the quiz and recieve a score and sound based user feedback as you go.
+
+
+## Ideas for Future Implementation
+
+
+## Special Thank You
