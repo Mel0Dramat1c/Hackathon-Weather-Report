@@ -263,34 +263,34 @@ searchBtn.addEventListener("click", () => {
 
 const questions = [
   {
-      question: "What do we call the white, fluffy stuff that falls from the sky in winter?",
-      answers: [
-          { text: "Snow", correct: true },
-          { text: "Sand", correct: false },
-          { text: "Hail", correct: false },
-          { text: "Dust", correct: false }
+    question: "What do we call the white, fluffy stuff that falls from the sky in winter?",
+    answers: [
+      { text: "Snow", correct: true },
+      { text: "Sand", correct: false },
+      { text: "Hail", correct: false },
+      { text: "Dust", correct: false }
 
-      ]
+    ]
 
   },
   {
-      question: "On a sunny day, what do you wear to protect your eyes from the bright light?",
-      answers: [
-          { text: "Binoculars", correct: false },
-          { text: "Reading glasses", correct: false },
-          { text: "Sunglasses", correct: true },
-          { text: "Nothing", correct: false }
+    question: "On a sunny day, what do you wear to protect your eyes from the bright light?",
+    answers: [
+      { text: "Binoculars", correct: false },
+      { text: "Reading glasses", correct: false },
+      { text: "Sunglasses", correct: true },
+      { text: "Nothing", correct: false }
 
-      ]
+    ]
 
   },
   {
     question: "What kind of weather is it when it is bright and warm?",
     answers: [
-        { text: "Rainy", correct: false },
-        { text: "Sunny", correct: true },
-        { text: "Snowing", correct: false },
-        { text: "Cloudy", correct: false }
+      { text: "Rainy", correct: false },
+      { text: "Sunny", correct: true },
+      { text: "Snowing", correct: false },
+      { text: "Cloudy", correct: false }
 
     ]
 
@@ -298,67 +298,67 @@ const questions = [
   {
     question: "What kind of weather is it when it is wet outside and drops of water fall from the sky?",
     answers: [
-        { text: "Dry", correct: false },
-        { text: "Sunny", correct: false },
-        { text: "Rainy", correct: true },
-        { text: "Snowing", correct: false }
+      { text: "Dry", correct: false },
+      { text: "Sunny", correct: false },
+      { text: "Rainy", correct: true },
+      { text: "Snowing", correct: false }
 
     ]
 
   },
   {
-  question: "What kind of weather is it when it is cold and covered in white snow?",
-  answers: [
+    question: "What kind of weather is it when it is cold and covered in white snow?",
+    answers: [
       { text: "Snowing", correct: true },
       { text: "Sunny", correct: false },
       { text: "Raining", correct: false },
       { text: "Stormy", correct: false }
 
-  ]
+    ]
 
   },
   {
-  question: " When it is rainy, what do we bring with us?",
-  answers: [
+    question: " When it is rainy, what do we bring with us?",
+    answers: [
       { text: "Snow sled", correct: false },
       { text: "Tshirt", correct: false },
       { text: "Sunglasses", correct: false },
       { text: "Umbrella", correct: true }
 
-  ]
+    ]
 
   },
   {
-  question: "When it is sunny, what do we bring with us?",
-  answers: [
+    question: "When it is sunny, what do we bring with us?",
+    answers: [
       { text: "Sun screen", correct: true },
       { text: "Warm gloves", correct: false },
       { text: "Umbrella", correct: false },
       { text: "Heavy boots", correct: false }
 
-  ]
+    ]
 
   },
   {
-  question: "When it is snowy, what do we bring with us?",
-  answers: [
+    question: "When it is snowy, what do we bring with us?",
+    answers: [
       { text: "Sunscreen", correct: false },
       { text: "T-shirt", correct: false },
       { text: "Sunglasses", correct: false },
       { text: "A coat and warm gloves", correct: true }
 
-  ]
+    ]
 
   },
   {
-  question: "Because it has rained, what sometimes appears in the sky?",
-  answers: [
+    question: "Because it has rained, what sometimes appears in the sky?",
+    answers: [
       { text: "Rainbow", correct: true },
       { text: "Airplane", correct: false },
       { text: "The moon", correct: false },
       { text: "Helicopter", correct: false }
 
-  ]
+    ]
 
   },
   {
@@ -368,9 +368,9 @@ const questions = [
       { text: "Black", correct: true },
       { text: "Yellow", correct: false },
       { text: "Violet", correct: false }
-  
+
     ]
-  
+
   },
   {
     question: "Why should we be careful when it is foggy outside.",
@@ -379,9 +379,9 @@ const questions = [
       { text: "It might snow", correct: false },
       { text: "It is too cold to go outside.", correct: false },
       { text: "It is hard to see.", correct: true }
-  
+
     ]
-  
+
   },
   {
     question: "Why is it important to wear sunscreen when the temperature is high?",
@@ -390,9 +390,9 @@ const questions = [
       { text: "It prevents sunburn and protects your skin.", correct: true },
       { text: "It is not important.", correct: false },
       { text: "It keeps you from drying out.", correct: false }
-  
+
     ]
-  
+
   },
   {
     question: "What does 'humidity' mean?",
@@ -401,9 +401,9 @@ const questions = [
       { text: "How funny something is.", correct: true },
       { text: "How heavy the snow is.", correct: false },
       { text: "How windy it is.", correct: false }
-  
+
     ]
-  
+
   },
   {
     question: "What does 'wind speed' mean?",
@@ -412,9 +412,9 @@ const questions = [
       { text: "How soon the wind will clear up the rain.", correct: false },
       { text: "How strong the wind is blowing.", correct: true },
       { text: "How soon it will snow.", correct: false }
-  
+
     ]
-  
+
   },
   {
     question: "What part of the weather makes a loud booming noise.",
@@ -423,9 +423,9 @@ const questions = [
       { text: "Lightning", correct: false },
       { text: "Hail", correct: false },
       { text: "Rain", correct: false }
-  
+
     ]
-  
+
   },
   {
     question: "What do dark clouds in the sky usually mean?",
@@ -434,9 +434,9 @@ const questions = [
       { text: "It is about to rain.", correct: true },
       { text: "It is going to be a clear sky soon.", correct: false },
       { text: "It does not mean anything.", correct: false }
-  
+
     ]
-  
+
   },
   {
     question: "What kind of temperature is 2°C?",
@@ -445,9 +445,9 @@ const questions = [
       { text: "Mild", correct: false },
       { text: "Cold", correct: true },
       { text: "Warm", correct: false }
-  
+
     ]
-  
+
   },
   {
     question: "What kind of temperature is 28°C",
@@ -456,9 +456,9 @@ const questions = [
       { text: "Hot", correct: true },
       { text: "Cold", correct: false },
       { text: "Mild", correct: false }
-  
+
     ]
-  
+
   },
   {
     question: "What do clouds carry?",
@@ -467,21 +467,21 @@ const questions = [
       { text: "Lightning", correct: false },
       { text: "Rain", correct: true },
       { text: "Nothing but air", correct: false }
-  
+
     ]
-  
+
   },
   {
-  question: "Why is it important to be careful when it is icy?",
-  answers: [
+    question: "Why is it important to be careful when it is icy?",
+    answers: [
       { text: "It might melt as you're walking on it.", correct: false },
       { text: "You might slip and fall.", correct: true },
       { text: "It might be sticky for your shoes.", correct: false },
       { text: "It's not important to be careful when it is icy.", correct: false }
 
-  ]
+    ]
 
-}
+  }
 ];
 const questionElement = document.getElementById("question");
 const answerButton = document.getElementById("answer-buttons");
@@ -502,14 +502,14 @@ function showQuestion() {
   let quesNo = currentIndex + 1;
   questionElement.innerHTML = quesNo + "." + currentQuestion.question;
   currentQuestion.answers.forEach(answer => {
-      const button = document.createElement("button");
-      button.innerHTML = answer.text;
-      button.classList.add("btn");
-      answerButton.appendChild(button);
-      if (answer.correct) {
-          button.dataset.correct = answer.correct
-      }
-      button.addEventListener("click", selectAnswer)
+    const button = document.createElement("button");
+    button.innerHTML = answer.text;
+    button.classList.add("btn");
+    answerButton.appendChild(button);
+    if (answer.correct) {
+      button.dataset.correct = answer.correct
+    }
+    button.addEventListener("click", selectAnswer)
 
   })
 
@@ -517,69 +517,78 @@ function showQuestion() {
 function resetState() {
   nextButton.style.display = "none";
   while (answerButton.firstChild) {
-      answerButton.removeChild(answerButton.firstChild)
+    answerButton.removeChild(answerButton.firstChild)
   }
 }
 function selectAnswer(e) {
   const selectedBtn = e.target;
   const iscorrect = selectedBtn.dataset.correct === "true";
   if (iscorrect) {
-      selectedBtn.classList.add("correct");
-      const audio = new Audio('yay.ogg');
-      const audio2 = new Audio('yay2.mp3');
-      // Play the audio
-      audio.play();
-  audio2.play();
-  confetti();
-      score++;
+    selectedBtn.classList.add("correct");
+    const audio = new Audio('yay.ogg');
+    const audio2 = new Audio('yay2.mp3');
+    // Play the audio
+    audio.play();
+    audio2.play();
+    confetti();
+    score++;
   } else {
-      selectedBtn.classList.add("incorrect");
+    selectedBtn.classList.add("incorrect");
   }
-  Array.from(answerButton.children).forEach(button=>{
-      if(button.dataset.correct==="true"){
-          button.classList.add('correct');
-         
-  
-      }
-      button.disabled=true;
+  Array.from(answerButton.children).forEach(button => {
+    if (button.dataset.correct === "true") {
+      button.classList.add('correct');
+
+
+    }
+    button.disabled = true;
   });
-  nextButton.style.display="block";
+  nextButton.style.display = "block";
 
 }
-nextButton.addEventListener("click",()=>{
-  if(currentIndex<questions.length){
-      handleNextbutton();
-  }else{
-      startQuiz();
+nextButton.addEventListener("click", () => {
+  if (currentIndex < questions.length) {
+    handleNextbutton();
+  } else {
+    startQuiz();
   }
 })
-function handleNextbutton(){
+function handleNextbutton() {
   currentIndex++;
-  if(currentIndex<questions.length){
-      showQuestion();
+  if (currentIndex < questions.length) {
+    showQuestion();
   }
-  else{
-      showScore();
+  else {
+    showScore();
   }
 
 }
-function showScore(){
+function showScore() {
   resetState();
-  questionElement.innerHTML=`you scored ${score} out of ${questions.length}!`;
-  nextButton.innerHTML="play again";
-  nextButton.style.display="block";
+  questionElement.innerHTML = `you scored ${score} out of ${questions.length}!`;
+  nextButton.innerHTML = "play again";
+  nextButton.style.display = "block";
 }
- function openQuiz() {
- var div = document.getElementById('quizDiv');
-    if (div.style.display !== 'none') {
-        div.style.display = 'none';
-        buttonText.innerHTML="Open Quiz";
-    }
-    else {
-        div.style.display = 'block';
-        buttonText=document.getElementById('buttonQuiz');
-        buttonText.innerHTML="Close Quiz";
-    }
+function openQuiz() {
+  var div = document.getElementById('quizDiv');
+  var weatherdiv=document.getElementsByClassName("weather");
+  var weatherIcon=document.getElementsByClassName("weather-icon");
+ 
+  
+  if (div.style.display !== 'none') {
+    div.style.display = 'none';
+    buttonText.innerHTML = "Open Quiz";
+    
+    weatherdiv.style.display="none";
+    weatherIcon.style.display="none";
+  }
+  else {
+    div.style.display = 'block';
+    buttonText = document.getElementById('buttonQuiz');
+    buttonText.innerHTML = "Close Quiz";
+    weatherdiv.style.display="block";
+    weatherIcon.style.display="block";
+  }
 };
 startQuiz();
 
