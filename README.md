@@ -104,18 +104,18 @@ Easy-to-Use Interface: Easy navigation and use of popups for a seamless user exp
 
 
 ### Bugs
-Text to Speech
+Our foreground image disappeared on multiple occasions. This was resolved each time with a quick review of the code.
 
-Images for quiz
+One of the culprits for its disappearance was changes to image pathing due to different assets in different folders across repo branches. These issues often caused confusion but were quickly ammended when understood.
 
-Bootstrap
+Efforts were made to incorporate background images into the quiz each unique and themed to different questions. Though we sourced enough images and implemented them through Javascript, issues with CSS and the foreground image led to this feature being scrapped.
 
-Broken pathing
+An early attempt to implement Bootstrap caused issues with existing CSS and ultimately Bootstrap was scrapped.
 
-Foreground Image disappearance
 
 ## Website Images
 
+![Local Image](assets/images/README/quiz.png)
 
 ## Presentation Slides
 TBI
