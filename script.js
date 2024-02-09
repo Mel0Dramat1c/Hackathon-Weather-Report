@@ -605,7 +605,7 @@ function openQuiz() {
   
   if (div.style.display !== 'none') {
     div.style.display = 'none';
-    buttonText.innerHTML = "Open Quiz";
+   
     
     weatherdiv.style.display="none";
     weatherIcon.style.display="none";
@@ -613,7 +613,7 @@ function openQuiz() {
   else {
     div.style.display = 'block';
     buttonText = document.getElementById('buttonQuiz');
-    buttonText.innerHTML = "Close Quiz";
+    
     weatherdiv.style.display="block";
     weatherIcon.style.display="block";
   }
