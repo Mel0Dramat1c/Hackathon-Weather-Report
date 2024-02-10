@@ -147,10 +147,10 @@ The weather API that fetches weather reports.
 ![Local Image](assets/images/README/projectWeather.PNG)
 
 ## Presentation Slides
-
+TBI
 
 ## Link to Website
-TBI
+https://mel0dramat1c.github.io/Hackathon-Weather-Report/
 
 
 ## How to Use
