@@ -425,8 +425,8 @@ const questions = [
   {
     question: "What does 'humidity' mean?",
     answers: [
-      { text: "How much moisture in the air.", correct: false },
-      { text: "How funny something is.", correct: true },
+      { text: "How much moisture in the air.", correct: true },
+      { text: "How funny something is.", correct: false },
       { text: "How heavy the snow is.", correct: false },
       { text: "How windy it is.", correct: false }
 
